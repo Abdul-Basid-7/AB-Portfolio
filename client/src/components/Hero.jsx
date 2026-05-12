@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaArrowDown } from "react-icons/fa";
+import StarsBackground from "../three/StarsBackground";
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+        <section id="home" className="relative z-10 overflow-hidden min-h-screen flex items-center justify-center px-6">
+            <StarsBackground />
 
             {/* Background Glow */}
             <div className="absolute w-[500px] h-[500px] bg-violet-600/30 blur-[120px] rounded-full top-20 left-10"></div>
@@ -11,7 +13,7 @@ const Hero = () => {
             <div className="absolute w-[400px] h-[400px] bg-cyan-500/20 blur-[100px] rounded-full bottom-10 right-10"></div>
 
             {/* Grid Background */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+          { /* <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>*/}
 
             <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 

@@ -28,14 +28,14 @@ const Footer = () => {
         <div className="flex gap-6 text-2xl">
 
           <a
-            href="https://github.com/"
+            href="https://github.com/Abdul-Basid-7/"
             target="_blank"
           >
             <FaGithub className="hover:text-violet-400 transition" />
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/basid7"
             target="_blank"
           >
             <FaLinkedin className="hover:text-cyan-400 transition" />
