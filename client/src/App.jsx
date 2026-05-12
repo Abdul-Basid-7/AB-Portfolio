@@ -11,7 +11,7 @@ import SectionWrapper from "./components/SectionWrapper";
 function App() {
   return (
     <div className="bg-[#050816] text-white overflow-hidden">
-      <Navbar />
+      <Navbar className=" max-w-7xl mx-auto  px-6  py-4  flex  items-center  justify-between "/>
       <Hero />
       <SectionWrapper>
         <About />

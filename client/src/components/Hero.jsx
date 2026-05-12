@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="absolute w-[400px] h-[400px] bg-cyan-500/20 blur-[100px] rounded-full bottom-10 right-10"></div>
 
             {/* Grid Background */}
-          { /* <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>*/}
+            { /* <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>*/}
 
             <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
@@ -23,37 +23,79 @@ const Hero = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <p className="text-violet-400 font-medium mb-4 tracking-widest uppercase">
-                        Full Stack Developer
-                    </p>
+                    <div className="flex-1">
 
-                    <h1 className="text-5xl md:text-7xl font-black leading-tight">
-                        Building
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">
-                            Modern Web
-                        </span>
-                        Experiences
-                    </h1>
+                        <p className="text-purple-400 font-medium mb-4">
+                            Full Stack Developer
+                        </p>
 
-                    <p className="mt-6 text-gray-400 text-lg max-w-xl leading-relaxed">
-                        I build scalable and visually stunning full-stack applications
-                        using the MERN stack with modern UI/UX experiences.
-                    </p>
+                        <h1
+                            className="
+    text-5xl
+    md:text-7xl
 
-                    {/* Buttons */}
-                    <div className="mt-8 flex flex-wrap gap-4">
+    font-bold
 
-                        <button className="px-7 py-3 rounded-full bg-violet-600 hover:bg-violet-700 transition font-medium shadow-lg shadow-violet-500/30">
-                            View Projects
-                        </button>
-
-                        <a
-                            href="/AbdulBasid-resume2.pdf"
-                            download
-                            className="px-7 py-3 rounded-full border border-white/20 hover:bg-white/10 transition font-medium"
+    leading-tight
+    "
                         >
-                            Download CV
-                        </a>
+                            Hi, I'm{" "}
+
+                            <span
+                                className="
+      text-transparent
+      bg-clip-text
+
+      bg-gradient-to-r
+      from-purple-400
+      to-cyan-400
+      "
+                            >
+                                Abdul Basid
+                            </span>
+                        </h1>
+
+                        <p
+                            className="
+    mt-6
+
+    text-gray-300
+
+    text-lg
+    md:text-xl
+
+    max-w-2xl
+
+    leading-relaxed
+    "
+                        >
+                            MERN Stack Developer focused on
+                            building scalable full-stack
+                            applications with modern UI/UX
+                            and production-ready architecture.
+                        </p>
+
+                        {/* BUTTONS */}
+
+                        <div className="mt-10 flex gap-5 flex-wrap">
+
+                            <a
+                                href="#projects"
+                                className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 font-semibold hover:scale-105 transition-transform duration-300"
+                            >
+                                View Projects
+                            </a>
+
+                            <a
+                                href="/resume.pdf"
+                                download
+
+                                className=" px-8 py-4 rounded-xl border border-white/20 backdrop-blur-lg bg-white/5 hover:bg-white/10 transition-all duration-300"
+                            >
+                                Download Resume
+                            </a>
+
+                        </div>
                     </div>
 
                     {/* Social Icons */}
@@ -87,7 +129,7 @@ const Hero = () => {
 
                             <div className="w-32 h-32 rounded-full bg-gradient-to-r from-violet-500 to-cyan-500 p-1">
                                 <div className="w-full h-full rounded-full bg-[#0B1120] flex items-center justify-center text-5xl font-bold">
-                                    A
+                                    <img src="/images/profile_pic.jpg" alt="Profile" className="w-full h-full object-cover rounded-full border-2 border-white/20" />
                                 </div>
                             </div>
 

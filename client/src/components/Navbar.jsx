@@ -144,7 +144,7 @@ const Navbar = () => {
                             opacity: 0,
                             y: -20,
                         }}
-                        className="md:hidden bg-[#0F172A]/95 backdrop-blur-xl border-t border-white/10"
+                        className=" backdrop-blur-xl bg-black/50 border border-white/10 rounded-2xl "
                     >
 
                         <ul className="flex flex-col items-center gap-8 py-10 text-lg">
