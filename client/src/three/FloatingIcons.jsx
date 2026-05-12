@@ -11,19 +11,58 @@ import {
   SiExpress,
 } from "react-icons/si";
 
+import {
+  useEffect,
+  useState,
+} from "react";
+
 const FloatingIcons = () => {
+
+  const [isMobile, setIsMobile] =
+    useState(false);
+
+  useEffect(() => {
+
+    const checkMobile = () => {
+
+      setIsMobile(
+        window.innerWidth < 768
+      );
+    };
+
+    checkMobile();
+
+    window.addEventListener(
+      "resize",
+      checkMobile
+    );
+
+    return () =>
+      window.removeEventListener(
+        "resize",
+        checkMobile
+      );
+
+  }, []);
+
   return (
     <>
 
-         {/* NODE */}
+      {/* NODE */}
 
       <Float
         speed={2.5}
         rotationIntensity={1}
         floatIntensity={2}
       >
-        <Html position={[7, 1, -2]}>
-          <div className="text-green-500 text-6xl drop-shadow-[0_0_20px_#22c55e]">
+        <Html
+          position={
+            isMobile
+              ? [1.8, 1, -2]
+              : [7, 1, -2]
+          }
+        >
+          <div className="text-green-500 text-4xl md:text-6xl drop-shadow-[0_0_20px_#22c55e]">
             <FaNodeJs />
           </div>
         </Html>
@@ -36,22 +75,34 @@ const FloatingIcons = () => {
         rotationIntensity={1}
         floatIntensity={2}
       >
-        <Html position={[-4, 2, -2]}>
-          <div className="text-cyan-400 text-6xl drop-shadow-[0_0_20px_#22d3ee]">
+        <Html
+          position={
+            isMobile
+              ? [-1.8, 1.5, -2]
+              : [-4, 2, -2]
+          }
+        >
+          <div className="text-cyan-400 text-4xl md:text-6xl drop-shadow-[0_0_20px_#22d3ee]">
             <FaReact />
           </div>
         </Html>
       </Float>
 
-   {/* JAVASCRIPT */}
+      {/* JAVASCRIPT */}
 
       <Float
         speed={2.2}
         rotationIntensity={1}
         floatIntensity={2}
       >
-        <Html position={[3, -3, -2]}>
-          <div className="text-yellow-300 text-5xl drop-shadow-[0_0_20px_#fde047]">
+        <Html
+          position={
+            isMobile
+              ? [1.5, -1.5, -2]
+              : [3, -3, -2]
+          }
+        >
+          <div className="text-yellow-300 text-3xl md:text-5xl drop-shadow-[0_0_20px_#fde047]">
             <SiJavascript />
           </div>
         </Html>
@@ -64,8 +115,14 @@ const FloatingIcons = () => {
         rotationIntensity={1}
         floatIntensity={2}
       >
-        <Html position={[-3, -2, -2]}>
-          <div className="text-green-400 text-5xl drop-shadow-[0_0_20px_#4ade80]">
+        <Html
+          position={
+            isMobile
+              ? [-1.5, -1.5, -2]
+              : [-3, -2, -2]
+          }
+        >
+          <div className="text-green-400 text-3xl md:text-5xl drop-shadow-[0_0_20px_#4ade80]">
             <SiMongodb />
           </div>
         </Html>
@@ -78,8 +135,14 @@ const FloatingIcons = () => {
         rotationIntensity={1}
         floatIntensity={2}
       >
-        <Html position={[0, 3, -3]}>
-          <div className="text-white text-5xl drop-shadow-[0_0_20px_#ffffff]">
+        <Html
+          position={
+            isMobile
+              ? [0, 2.3, -3]
+              : [0, 3, -3]
+          }
+        >
+          <div className="text-white text-3xl md:text-5xl drop-shadow-[0_0_20px_#ffffff]">
             <SiExpress />
           </div>
         </Html>
